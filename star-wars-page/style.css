@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@300&display=swap');
+
+
+
+body {
+    padding-top: 150px;
+    background-color: black;
+
+}
+
+#background {
+    background-color: black;
+
+}
+
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: yellow;
+}
+
+p {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 400px);
+    justify-content: center;
+    grid-gap: 1.5rem;
+    border-radius: 4px;
+    padding: .5rem;
+    padding-top: 25px;
+    font-size: 13px;
+
+}
+
+
+h2 {
+    font-family: Raleway;
+    font-size: 13px;
+}
