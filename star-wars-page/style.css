@@ -5,13 +5,12 @@
 body {
     padding-top: 150px;
     background-color: black;
+    color: white;
+    text-align: center;
+
 
 }
 
-#background {
-    background-color: black;
-
-}
 
 
 h1 {
@@ -27,18 +26,31 @@ p {
 
 .cards {
     display: grid;
+    position: relative;
     grid-template-columns: repeat(auto-fill, 400px);
     justify-content: center;
     grid-gap: 1.5rem;
     border-radius: 4px;
     padding: .5rem;
-    padding-top: 25px;
+    padding-top: 60px;
     font-size: 13px;
+    font-size: 'Raleway',
+        sans-serif;
+
+
+
+}
+
+.eachCard {
+    width: 375px;
+    background-color: aquamarine;
 
 }
 
 
-h2 {
+h4 {
     font-family: Raleway;
-    font-size: 13px;
+    font-size: 16px;
 }
+
+.btn {}

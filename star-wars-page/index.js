@@ -5,15 +5,9 @@ const personThree = 'https://swapi.dev/api/people/5/';
 
 const allPeople = [personOne, personTwo, personThree]
 
-const planetOne = 'https://swapi.dev/api/planets/1/';
-const planetTwo = 'https://swapi.dev/api/planets/8/';
-const planetThree = 'https://swapi.dev/api/planets/2/';
-
-const allPlanets = [planetOne, planetTwo, planetThree]
-
-const filmOne = 'https://swapi.dev/api/planets/1/';
-const filmTwo = 'https://swapi.dev/api/planets/8/';
-const filmThree = 'https://swapi.dev/api/planets/2/';
+const filmOne = 'https://swapi.dev/api/films/1/';
+const filmTwo = 'https://swapi.dev/api/films/2/';
+const filmThree = 'https://swapi.dev/api/films/3/';
 
 const allFilms = [filmOne, filmTwo, filmThree]
 
@@ -29,7 +23,7 @@ async function getData(url) {
 
         return response.json();
     } catch (e) {
-        console.log(e)
+        //paste 404 doc
     }
 
 }
@@ -43,7 +37,7 @@ async function eachPerson() {
             console.log(personData)
             if (personData) {
                 let peeep = `
-                <div class= "card">
+                <div>
                     <h4>Name: ${personData.name}<h4>
 
                     <h4>Skin Color: ${personData.skin_color}</h4>
@@ -51,10 +45,8 @@ async function eachPerson() {
                     <h4>Gender: ${personData.gender}</h4>
 
                     <h4>Hair Color: ${personData.hair_color}</h4>
-
-                    <h4> <a href"${personData.homeworld}"></a>Homeworld: </h4>
-
-                    <h4><a href='${personData.films}'></a>Films :</h4>
+                    
+                    <button type="button" class="btn btn-outline-dark" onclick="window.location.href='films.html';">Films</button>
                 </div>
                 `;
                 all += peeep;
@@ -74,15 +66,43 @@ async function eachPerson() {
 eachPerson();
 
 
-// const eachPlanet = allPlanets.forEach(async (planet) => {
-//     return getData(planet);
 
-// });
 
-// const eachFilm = allFilms.forEach(async (film) => {
-//     return getData(film);
+async function eachFilm() {
+    let everyCommonFilm = '';
+    allFilms.forEach((film) => {
 
-// });
+        let filmData;
+        getData(film).then(filmData => {
+            console.log(filmData)
+            if (filmData) {
+                let theFilms = `
+                <div class= "Eachcard">
+                    <h4>Title: ${filmData.title}<h4>
+
+                    <h4>Opening Line: ${filmData.opening_crawl}</h4>
+
+                    <h4>Producer: ${filmData.producer}</h4>
+
+                    <h4>Director: ${filmData.director}</h4>
+
+                </div>
+                `;
+                everyCommonFilm += theFilms;
+            }
+            let displayCommonFilms = document.getElementById("film");
+            displayCommonFilms.innerHTML = everyCommonFilm;
+
+        })
+
+
+    });
+
+
+
+}
+
+eachFilm();
 
 
 
