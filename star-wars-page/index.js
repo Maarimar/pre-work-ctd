@@ -37,7 +37,7 @@ async function eachPerson() {
             console.log(personData)
             if (personData) {
                 let peeep = `
-                <div>
+                <div class="card">
                     <h4>Name: ${personData.name}<h4>
 
                     <h4>Skin Color: ${personData.skin_color}</h4>
@@ -46,12 +46,12 @@ async function eachPerson() {
 
                     <h4>Hair Color: ${personData.hair_color}</h4>
                     
-                    <button type="button" class="btn btn-outline-dark" onclick="window.location.href='films.html';">Films</button>
+                    <button type="button" onclick="window.location.href='films.html';">Films</button>
                 </div>
                 `;
                 all += peeep;
             }
-            let final = document.getElementById("person");
+            let final = document.querySelector('.people');
             final.innerHTML = all;
 
         })
@@ -77,20 +77,23 @@ async function eachFilm() {
             console.log(filmData)
             if (filmData) {
                 let theFilms = `
-                <div class= "Eachcard">
+                <div class="card">
+            
+               
                     <h4>Title: ${filmData.title}<h4>
 
-                    <h4>Opening Line: ${filmData.opening_crawl}</h4>
+                    <h4>Plot: ${filmData.opening_crawl}</h4>
 
                     <h4>Producer: ${filmData.producer}</h4>
 
                     <h4>Director: ${filmData.director}</h4>
+                    </div>
 
-                </div>
+               
                 `;
                 everyCommonFilm += theFilms;
             }
-            let displayCommonFilms = document.getElementById("film");
+            let displayCommonFilms = document.querySelector('.films');
             displayCommonFilms.innerHTML = everyCommonFilm;
 
         })
@@ -103,6 +106,9 @@ async function eachFilm() {
 }
 
 eachFilm();
+
+
+
 
 
 

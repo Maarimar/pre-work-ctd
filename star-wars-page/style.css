@@ -2,55 +2,154 @@
 
 
 
-body {
+.container {
     padding-top: 150px;
     background-color: black;
     color: white;
     text-align: center;
+    margin: 100px;
+    padding: 50px;
+
 
 
 }
+
+a {
+    outline: none;
+    text-decoration: none;
+    padding: 2px 1px 0;
+    color: yellow;
+}
+
+
+
+
+a:hover {
+    border-bottom: 1px solid;
+    background: yellow;
+    color: black;
+}
+
 
 
 
 h1 {
     font-family: 'Press Start 2P', cursive;
     color: yellow;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
 p {
     font-family: 'Raleway', sans-serif;
     color: white;
+    font-size: 20px;
 }
 
 
-.cards {
+.cards-container {
+
     display: grid;
-    position: relative;
-    grid-template-columns: repeat(auto-fill, 400px);
-    justify-content: center;
-    grid-gap: 1.5rem;
-    border-radius: 4px;
-    padding: .5rem;
-    padding-top: 60px;
-    font-size: 13px;
-    font-size: 'Raleway',
-        sans-serif;
+    grid-template-columns: repeat(3, 400px);
+    margin: auto;
+    column-gap: 35px;
+    color: black;
+
+}
+
+.cards-container .people {
+    margin: auto;
 
 
 
 }
 
-.eachCard {
-    width: 375px;
-    background-color: aquamarine;
+.cards-container .films {
+    margin: auto;
 
 }
+
+.card {
+    border-radius: 8px;
+    border: solid;
+    border-color: yellow;
+    padding: 40px;
+    width: fit-content;
+    height: fit-content;
+    background-color: aliceblue;
+    margin: auto;
+    line-height: normal;
+
+
+
+}
+
+.card:hover {
+    width: 400px;
+    height: auto;
+    font-weight: bolder;
+    box-shadow: 20px 20px 50px rgb(255, 249, 176);
+    z-index: 6;
+
+}
+
+
+
+
 
 
 h4 {
     font-family: Raleway;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.btn {}
+button {
+    border-radius: 8px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    border-color: yellow;
+
+
+    width: max-content;
+}
+
+button:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+
+.container .btn {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-color: yellow;
+    width: max-content;
+
+}
+
+
+.container .btn:hover {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+}
+
+img {
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    margin: auto;
+    padding: 15px;
+}
