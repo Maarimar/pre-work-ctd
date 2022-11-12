@@ -26,7 +26,7 @@ async function getData(url) {
 
         return response.json();
     } catch (e) {
-        document.getElementById('404page');
+        document.getElementById('error');
     }
 
 }
