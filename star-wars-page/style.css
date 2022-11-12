@@ -89,6 +89,7 @@ p {
     height: auto;
     font-weight: bolder;
     box-shadow: 20px 20px 50px rgb(255, 249, 176);
+    line-height: 2rem;
     z-index: 6;
 
 }
@@ -152,4 +153,17 @@ img {
     border-radius: 20px;
     margin: auto;
     padding: 15px;
+}
+
+.not-found {
+    display: block;
+    margin: auto;
+    width: auto;
+
+
+
+}
+
+.error {
+    background-color: black;
 }
