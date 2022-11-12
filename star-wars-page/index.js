@@ -1,3 +1,6 @@
+
+//links to fetch
+
 const swapiURL = 'https://swapi.dev/api/';
 const personOne = 'https://swapi.dev/api/people/1/';
 const personTwo = 'https://swapi.dev/api/people/3/';
@@ -23,10 +26,13 @@ async function getData(url) {
 
         return response.json();
     } catch (e) {
-        //paste 404 doc
+        document.getElementById('404page');
     }
 
 }
+
+
+//
 
 async function eachPerson() {
     let all = '';
