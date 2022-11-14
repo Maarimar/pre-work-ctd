@@ -26,7 +26,8 @@ async function getData(url) {
 
         return response.json();
     } catch (e) {
-        document.getElementById('error');
+        console.log(e)
+
     }
 
 }
